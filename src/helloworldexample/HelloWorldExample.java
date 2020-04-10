@@ -22,7 +22,8 @@ import java.util.Scanner;
 public class HelloWorldExample {
 
     //In order to use Hbernate
-    private static SessionFactory factory;
+    private static SessionFactory factory;  //And each time, my program has ended, so I don't have a connection, so none of the messages are left in memory. It's obtaining all that data from the database, and that's how we persist the data from one session to the next.
+    //As seen it will reprints all data from database stored previously without obtainng that data specifically from DB.
     private static ServiceRegistry registry;
     /**
      * @param args the command line arguments
