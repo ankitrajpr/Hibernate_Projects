@@ -47,7 +47,7 @@ public class HelloWorldExample {
             tx=session.beginTransaction();
             Message msg = new Message(m);
             msgId = (Short) session.save(msg);
-            List messages = session.createQuery("FROM Message").list();
+            List messages = session.createQuery("FROM Message").list(); //Used HQL query as Object/ simple java objects rather than POJO to interact with DB. Also, redundacny of ResultSet here otherwise we needed to extract data from result set and then add to it by getter /setter of it.
             for(Iterator iterator = messages.iterator(); iterator.hasNext();){
                 Message message = (Message)iterator.next();
                 System.out.println("message: "+message.getMessage());
