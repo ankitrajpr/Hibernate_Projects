@@ -1,0 +1,10 @@
+Created a connection with mysql.
+Created a schema named messagerepository and then created a table within:
+CREATE TABLE MESSAGE (
+    id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    message varchar(50),
+    PRIMARY KEY (id)
+);
+Generate hibernate mapping files and pojos from database in intellij by View-Tool Windows Persistence.
+Then go to Gneerate Persistance Mapping which will create reverse engineering files defined via Project strcture of hibernate.reveng.xml created by xml for single table mappig with db.
+Mapping resources will be added in hibernate.cfg.xml for the reverse engineering file created by persistence layer for hbm.xml
